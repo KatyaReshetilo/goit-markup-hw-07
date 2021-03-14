@@ -1,0 +1,39 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container--main-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container--directions {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container--team {
+  background-color: var(--our-team-background);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container--clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container--portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container--footer {
+  display: flex;
+  justify-content: space-between;
+}

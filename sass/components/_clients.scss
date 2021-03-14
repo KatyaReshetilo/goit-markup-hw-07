@@ -1,0 +1,44 @@
+.item-head--clients {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.16;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.clients {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.clients__item {
+  color: var(--svg-main-color);
+}
+
+.clients__link {
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--svg-main-color);
+  border-radius: 4px;
+  color: currentColor;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: color 250ms var(--timing-funtion),
+    border-color 250ms var(--timing-funtion);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    outline: none;
+  }
+}
+
+.clients__svg {
+  fill: currentColor;
+}
