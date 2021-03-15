@@ -73,12 +73,16 @@
   align-items: center;
 }
 
-.head-contacts__item:not(:last-child) {
-  margin-right: 30px;
+.head-contacts__item{
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.site-menu__item:not(:last-child) {
-  margin-right: 50px;
+.site-menu__item{
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .head-contacts__svg {

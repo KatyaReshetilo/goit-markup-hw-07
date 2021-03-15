@@ -16,6 +16,14 @@ body {
   overflow: hidden;
 }
 
+.visually-hidden--input{
+  @extend .visually-hidden;
+
+  &:checked + .checkbox__check {
+    background-image: url(../images/check.svg);
+  }
+}
+
 h1 {
   margin: 0px;
 }

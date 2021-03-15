@@ -310,7 +310,7 @@ body {
   color: var(--main-color);
 }
 
-.visually-hidden {
+.visually-hidden, .visually-hidden--input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -322,6 +322,10 @@ body {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.visually-hidden--input:checked + .checkbox__check {
+  background-image: url(../images/check.svg);
 }
 
 h1 {
@@ -593,16 +597,16 @@ h1 {
   outline: none;
 }
 
+.modal-form__input:focus ~ .modal-form__svg {
+  fill: var(--accent-color);
+}
+
 .modal-form__svg {
   position: absolute;
   top: 50%;
   left: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.modal-form__input:focus ~ .modal-form__svg {
-  fill: var(--accent-color);
 }
 
 textarea {
@@ -672,10 +676,6 @@ textarea {
   background-image: url(../images/vect.svg);
 }
 
-input.visually-hidden:checked + .checkbox__check {
-  background-image: url(../images/check.svg);
-}
-
 .checkbox__label {
   font-weight: 400;
   font-size: 14px;
@@ -702,8 +702,8 @@ input.visually-hidden:checked + .checkbox__check {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-  -webkit-box-shadow: 0px 4px 4px black;
-          box-shadow: 0px 4px 4px black;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 55px;
   font-size: 16px;
   line-height: 1.86;
@@ -789,13 +789,13 @@ input.visually-hidden:checked + .checkbox__check {
   margin-right: 0;
 }
 
-.item-head {
+.features__item .item-head {
   color: var(--header-color);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
-.item-head--feature {
+.features__item .item-head--feature {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -831,6 +831,9 @@ input.visually-hidden:checked + .checkbox__check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
@@ -839,7 +842,10 @@ input.visually-hidden:checked + .checkbox__check {
 
 .directions__item {
   position: relative;
-  width: calc((1230px - 60px) / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc((1170px - 60px) / 3);
 }
 
 .directions__item:nth-last-child(3) {

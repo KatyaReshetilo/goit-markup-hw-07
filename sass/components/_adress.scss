@@ -21,7 +21,9 @@
   padding: 0;
 }
 
-.adress__item:not(:last-child) {
-  display: inline-block;
-  margin-bottom: 9px;
+.adress__item{
+  &:not(:last-child){
+    display: inline-block;
+    margin-bottom: 9px;
+  }
 }

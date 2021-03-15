@@ -1,5 +1,6 @@
 .directions {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -7,8 +8,10 @@
 
 .directions__item {
   position: relative;
-  width: calc((1230px - 60px) / 3);
+  display: flex;
+  width: calc((1170px - 60px) / 3);
   // margin-right: 30px;
+  
 
   &:nth-last-child(3) {
     margin-right: 0;

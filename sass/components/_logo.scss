@@ -10,11 +10,12 @@
   &__accent {
     color: var(--accent-color);
   }
+
+  &--footer {
+    display: inline-block;
+    color: var(--main-header);
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
-.logo--footer {
-  display: inline-block;
-  color: var(--main-header);
-  margin-right: 0;
-  margin-bottom: 20px;
-}

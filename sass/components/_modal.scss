@@ -76,6 +76,10 @@
   &:focus {
     border-color: #2196f3;
     outline: none;
+
+    &~ .modal-form__svg {
+      fill: var(--accent-color);
+    }
   }
 }
 
@@ -84,10 +88,6 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-}
-
-.modal-form__input:focus ~ .modal-form__svg {
-  fill: var(--accent-color);
 }
 
 textarea {
@@ -140,9 +140,6 @@ textarea {
   background-image: url(../images/vect.svg);
 }
 
-input.visually-hidden:checked + .checkbox__check {
-  background-image: url(../images/check.svg);
-}
 
 .checkbox__label {
   font-weight: 400;
@@ -166,7 +163,7 @@ input.visually-hidden:checked + .checkbox__check {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 15%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 55px;
   font-size: 16px;
   line-height: 1.86;
